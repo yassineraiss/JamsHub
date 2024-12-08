@@ -1,0 +1,189 @@
+html {
+    box-sizing: border-box; // specified width and height include both the content dimensions and any padding or border, without increasing the overall dimensions of the box
+    font-size: 100%; // makes sure that default size in the browser matches the size in the website
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; // inherits box sizing from the root (html)
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#root {
+    min-height: 100vh; /* Ensures the root element always takes at least the full viewport height */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    max-width: 1180px;
+    height: 95vh;
+    max-height: 95vh;
+    width: 95%;
+    gap: 2.5vh;
+}
+
+.side, .main {
+    height: 100%;
+    width: 100%;
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 20px;
+    padding: 2.5vh;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+
+    &__home-grid {
+        display: grid;
+        gap: 2.5vh;
+        grid-template-columns: 1.25fr 0.75fr;
+        grid-template-rows: 1.60fr 0.40fr;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__room-grid {
+        display: grid;
+        gap: 1.25vh;
+        grid-template-columns: 0.17fr 0.53fr 0.3fr;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.grid_col_span_2 {
+    grid-column: span 2;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 850px) {
+    .grid {
+        grid-template-columns: 1fr;
+        height: 97vh;
+        width: 97.5%;
+    }
+    .side {
+        display: none;
+    }
+}
+
+@media (max-width: 449.8px) {
+    .grid {
+        display: none;
+    }
+    .side {
+        display: none;
+    }
+}
+
+.mobile-flex {
+    display: flex;
+    flex-direction: column;
+    height: 99vh;
+    width: 99%;
+    background-color: hsl(0, 0%, 10%);
+    border-radius: 20px;
+    padding: 2.5vh 1.25vh;
+}
+
+@media (min-width: 449.7px) {
+    .mobile-flex {
+        display: none;
+    }
+}
+
+.mobile-flex-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.create-list-container {
+    height: 73%;
+    margin: 0.5rem;
+    overflow-y: auto;
+    border: 3px solid hsl(199, 33%, 52%);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+  
+.create-list-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 20px;
+}
+  
+.create-list-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+  
+.create-list-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+}
+  
+.create-list-container::-webkit-scrollbar-button {
+    display: none;
+}
+  
+.join-list-container {
+    height: 73%;
+    margin: 0.5rem;
+    overflow-y: auto;
+    border: 3px solid #b867b8c4;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+  
+.join-list-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 20px;
+}
+  
+.join-list-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+  
+.join-list-container::-webkit-scrollbar-track {
+    background-color: transparent;
+    border: none;
+}
+  
+.join-list-container::-webkit-scrollbar-button {
+    display: none;
+}
+
+// spotify styling:
+
