@@ -113,18 +113,7 @@ This file is declaring two contants the ACCESS_TOKEN and REFRESH_TOKEN.
 ### main.jsx file:
 This file is where I am rendering the App in the root div of the DOM and wrapping it in MUI dark mode theme.
 
-# How to run my app:
-  - First of all make sure you create a virtual environement where you can install the python dependencies in requirements.txt
-  - Make sure you have node.js insatlled. 
-  - Make sure you make migrations and migrate to your local database.
-  - Open three diffrent terminals and activate you virtual environement file in each one of them:
-    - First terminal is for the backend server, run **python manage.py runserver**.
-    - Second terminal is for the asynchronous daphne server, run **daphne -p 8001 capstone.asgi:application**.
-    - Third terminal is for the node server, cd to frontend then run **npm run dev**.
-  - Finally after running the three servers, in your web browser go to **http://localhost:5173**.
-
-# Additional information:
-- The credentials file in my backend contains my spotify client id and secret key so I would like to gently ask the staff to not open the file nor to share it.   
+# Additional information:  
 - Some files are not described because they are React/Django configuratrion or styling files.
 - The users authentication is acheived through jwt tokens.
 - The app requires from the users a spotify premium membership.
